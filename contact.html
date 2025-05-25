@@ -6,6 +6,183 @@
   <title>Contact | Amrit Raj Garg</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Add these styles to your style.css file */
+
+    /* Hero Section (Contact Page Specific) - Consistent with Home & About */
+    .contact-hero {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Same gradient */
+      color: white;
+      text-align: center;
+      padding: 100px 20px; /* Matching padding */
+      position: relative;
+    }
+    .contact-hero h1 {
+      font-size: 3.8em; /* Matching size */
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .contact-hero p {
+      font-size: 1.3em;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    /* Main Content Area */
+    .contact-main-content {
+      padding: 60px 20px;
+      max-width: 800px; /* Slightly narrower for form focus */
+      margin: 0 auto;
+      background-color: #ffffff; /* White background for form */
+      border-radius: 12px; /* Rounded corners */
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Soft shadow */
+      transform: translateY(-40px); /* Lift it slightly into the hero for visual appeal */
+      position: relative; /* Ensure z-index works */
+      z-index: 10; /* Bring to front of hero section */
+      text-align: center; /* Center content within the box */
+    }
+
+    .contact-main-content h2 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .contact-main-content h2::after { /* Underline effect */
+      content: '';
+      width: 80px;
+      height: 4px;
+      background-color: #2575fc;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      border-radius: 2px;
+    }
+
+    /* Contact Form Styling */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Spacing between form elements */
+      margin-top: 40px;
+      padding: 0 20px; /* Internal padding for form */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px; /* Slightly rounded for softness */
+      font-family: 'Poppins', sans-serif;
+      font-size: 1em;
+      color: #333;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #2575fc; /* Highlight on focus */
+      box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2); /* Subtle glow on focus */
+      outline: none; /* Remove default outline */
+    }
+
+    .contact-form textarea {
+      resize: vertical; /* Allow vertical resizing */
+      min-height: 120px;
+    }
+
+    .contact-form .btn {
+      align-self: center; /* Center the button */
+      width: fit-content; /* Only take content width */
+      background-color: #2575fc; /* Use primary accent for button */
+      color: white;
+      padding: 15px 45px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      border: none; /* Remove default button border */
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .contact-form .btn:hover {
+      background-color: #6a11cb; /* Darker accent on hover */
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Social Links Styling */
+    .social-links {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 30px; /* Space between social links */
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      color: #2575fc; /* Primary accent color */
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s ease, transform 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .social-links a i { /* Style for Font Awesome icons */
+        margin-right: 8px;
+        font-size: 1.3em; /* Slightly larger icon */
+    }
+
+    .social-links a:hover {
+      color: #6a11cb; /* Darker accent on hover */
+      transform: translateY(-3px); /* Subtle lift */
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .contact-hero h1 {
+        font-size: 2.8em;
+      }
+      .contact-hero p {
+        font-size: 1em;
+      }
+      .contact-main-content {
+        padding: 40px 15px;
+        transform: translateY(-20px); /* Less lift on smaller screens */
+      }
+      .contact-main-content h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      .contact-form {
+        padding: 0 10px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 12px;
+      }
+      .contact-form .btn {
+        padding: 12px 30px;
+        font-size: 1em;
+      }
+      .social-links {
+        gap: 20px;
+      }
+      .social-links a {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,7 +195,13 @@
       </ul>
     </nav>
   </header>
-  <section class="contact-section">
+
+  <section class="contact-hero">
+    <h1>Let's Connect!</h1>
+    <p>Have a project in mind, a question, or just want to say hello? Reach out!</p>
+  </section>
+
+  <section class="contact-main-content">
     <h2>Get In Touch</h2>
     <form action="mailto:amrit@example.com" method="POST" enctype="text/plain" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -26,11 +209,17 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit" class="btn">Send Message</button>
     </form>
+
     <div class="social-links">
-      <a href="https://in.linkedin.com/in/amritrajgarg" target="_blank">LinkedIn</a>
-      <a href="https://github.com/AmritRajGarg" target="_blank">GitHub</a>
-    </div>
+      <a href="https://in.linkedin.com/in/amritrajgarg" target="_blank" aria-label="LinkedIn Profile">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/AmritRajGarg" target="_blank" aria-label="GitHub Profile">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      </div>
   </section>
+
   <footer>
     <p>© 2025 Amrit Raj Garg</p>
   </footer>
