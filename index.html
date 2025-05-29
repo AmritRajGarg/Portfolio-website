@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Amrit Raj Garg</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
   <style>
- 
+    /* Universal Box-Sizing for consistent layout */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    /* Basic Body & Typography - Dark Theme Base */
     body {
       font-family: 'Poppins', sans-serif;
+      background-color: #121212; /* Your existing dark background */
+      color: #e0e0e0; /* Lighter text for dark background */
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      color: #e0e0e0; /* Lighter text for dark background */
-      background-color: #121212; /* Your existing dark body background */
     }
 
     /* Header & Navigation (Common to all pages) */
@@ -22,7 +26,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem; /* Matches your style.css padding */
+      padding: 1rem 2rem;
       background-color: #0f111a; /* Your existing darker navbar background */
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Darker shadow for dark theme */
     }
@@ -30,7 +34,7 @@
     .navbar .logo {
       font-size: 1.8em;
       font-weight: 600;
-      color: #00bcd4; /* Your existing logo color */
+      color: #2575fc; /* Primary accent blue */
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -40,7 +44,7 @@
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 1.5rem; /* Adjusted gap for consistency */
+      gap: 1.5rem; /* Slightly more space */
     }
 
     .nav-links li a {
@@ -60,13 +64,13 @@
       bottom: 0;
       width: 0;
       height: 2px;
-      background-color: #00bcd4; /* Your accent color */
+      background-color: #6a11cb; /* Deeper accent purple */
       transition: width 0.3s ease-in-out;
     }
 
     .nav-links li a:hover,
     .nav-links li a.active {
-      color: #00bcd4; /* Your accent color for active/hover */
+      color: #2575fc; /* Primary accent blue for active/hover */
     }
 
     .nav-links li a:hover::after,
@@ -76,10 +80,10 @@
 
     /* Hero Section (Home Page Specific) */
     .hero {
-      background: linear-gradient(135deg, #007c91, #00bcd4); /* Your existing hero gradient */
-      color: white;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Original blue-purple gradient */
+      color: white; /* White text for contrast */
       text-align: center;
-      padding: 150px 20px;
+      padding: 150px 20px; /* Generous padding for impact */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -99,12 +103,12 @@
     .hero-content h1 {
       font-size: 4.5em;
       margin-bottom: 20px;
-      text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.4); /* Stronger shadow for depth */
       line-height: 1.1;
     }
 
     .hero-content h1 span {
-      color: #f0f8ff; /* A slightly lighter color for emphasis */
+      color: #e0e0e0; /* A slightly lighter color for emphasis, blending with text */
       font-weight: 700;
     }
 
@@ -115,13 +119,13 @@
       text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
     }
 
-    /* Button Styling */
+    /* Buttons (Common across pages) */
     .btn {
       display: inline-block;
-      background-color: #00bcd4; /* Your existing button background */
-      color: #000; /* Black text for contrast */
+      background-color: #e0e0e0; /* Light button for contrast on dark gradient */
+      color: #6a11cb; /* Deeper accent for button text */
       padding: 15px 35px;
-      border-radius: 50px;
+      border-radius: 50px; /* Pill shape */
       text-decoration: none;
       font-weight: 600;
       font-size: 1.1em;
@@ -132,15 +136,16 @@
     }
 
     .btn:hover {
-      background-color: #00a0b0; /* Slightly darker accent on hover */
-      transform: translateY(-3px);
+      background-color: #ffffff; /* Brighter on hover */
+      color: #2575fc; /* Primary accent blue on hover */
+      transform: translateY(-3px); /* Subtle lift effect */
       box-shadow: 0 8px 20px rgba(0,0,0,0.5); /* More pronounced shadow on hover */
     }
 
     /* Footer (Common to all pages) */
     footer {
       text-align: center;
-      padding: 1rem; /* Matches your style.css padding */
+      padding: 1rem;
       background-color: #0f111a; /* Your existing footer background */
       color: #999; /* Your existing footer text color */
       position: relative;
@@ -148,7 +153,7 @@
       width: 100%;
     }
 
-    /* Responsive Adjustments */
+    /* --- Responsive Adjustments --- */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -169,7 +174,7 @@
 
       .hero {
         padding: 100px 20px;
-        min-height: 80vh;
+        min-height: 80vh; /* Adjust hero height for smaller screens */
       }
       .hero-content h1 {
         font-size: 3em;
